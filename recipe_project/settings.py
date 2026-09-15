@@ -132,7 +132,9 @@ def load_local_env(path):
 
 
 load_local_env(BASE_DIR / '.env')
-RECIPE_API_KEY = os.environ.get('RECIPE_API_KEY', '')
+RAPIDAPI_KEY = os.environ.get('RAPIDAPI_KEY') or os.environ.get('RECIPE_API_KEY', '')
+RAPIDAPI_HOST = os.environ.get('RAPIDAPI_HOST', '')
+RAPIDAPI_PATH = os.environ.get('RAPIDAPI_PATH', '/recipes')
 
 
 # Email
